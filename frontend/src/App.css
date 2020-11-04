@@ -1,0 +1,23 @@
+.App {
+  background-color: #282931;
+  min-height: 100vh;
+  font-family: "Roboto", "Helvetica Neue", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+h1 {
+  color: #fc3565;
+  padding-bottom: 0px;
+  margin-bottom: 1%;
+}
+
+.img-container{
+  background-color: #FFFDF8;
+}
+
+.upload{
+  min-height: 80vh;
+}
+
