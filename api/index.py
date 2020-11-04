@@ -11,7 +11,7 @@ import numpy as np
 app = Flask(__name__)
 app.debug = True 
 CORS(app)
-modelo = tf.keras.models.load_model(os.path.abspath(os.getcwd()) + '/api/keras_model/modelo')
+modelo = tf.keras.models.load_model(os.path.abspath(os.getcwd()) + '/keras_model/modelo')
 
 
 
@@ -32,7 +32,7 @@ def index():
     image_custom = ImageDataGenerator(
         rescale=1./255
     )
-    test_dir = os.path.abspath(os.getcwd()) + '/api/upload'
+    test_dir = os.path.abspath(os.getcwd()) + '/upload'
     print (test_dir)
     generatorCustom = image_custom.flow_from_directory(
         directory=test_dir,
@@ -40,7 +40,7 @@ def index():
         shuffle=False
     )
 
-    y_prob = modelo.predict(generatorCustom)
+    y_prob = modelo.predict_generator(generatorCustom)
     y_pred = np.argmax(y_prob)
 
     print(y_prob)
