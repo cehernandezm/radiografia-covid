@@ -3,3 +3,4 @@ flask-cors >= 3.0.9
 tensorflow >= 1.15
 tensorflow-gpu >= 2.3.1
 pillow >= 8.0.1
+keras >= 2.4.3
