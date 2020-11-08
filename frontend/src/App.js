@@ -15,7 +15,7 @@ class App extends Component {
       pictures: [],
       loading: false
     }
-    this.url = "http://localhost:5000/"
+    this.url = "http://35.225.76.77:5000/"
     document.title = "Covid-19 Analysis"
   }
   onDrop(picturesFiles, pictureDataURLs) {

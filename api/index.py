@@ -10,6 +10,7 @@ import numpy as np
 from datetime import datetime
 
 app = Flask(__name__)
+app.config['PROPAGATE_EXCEPTIONS'] = False
 app.debug = True
 CORS(app)
 modelo = tf.keras.models.load_model('/keras_model/modelo')
@@ -32,7 +33,7 @@ def index():
     image_custom = ImageDataGenerator(
         rescale=1./255
     )
-    test_dir =  '/api/upload'
+    test_dir =  '/upload'
     print(test_dir)
     generatorCustom = image_custom.flow_from_directory(
         directory=test_dir,
