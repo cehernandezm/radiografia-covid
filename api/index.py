@@ -12,8 +12,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.debug = True
 CORS(app)
-modelo = tf.keras.models.load_model(
-    os.path.abspath(os.getcwd()) + '/api/keras_model/modelo')
+modelo = tf.keras.models.load_model('/keras_model/modelo')
 
 
 ################################################### RUTAS ##############################################
@@ -24,8 +23,7 @@ def index():
     database64 = (imagen.split(sep="base64,"))[1]
     img = base64.b64decode(database64)
     now = datetime.now()
-    filename = os.path.abspath(os.getcwd(
-    )) + '/api/upload/images/test-' + now.strftime("%d-%m-%Y-%H-%M-%S") + '.png'
+    filename = '/upload/images/test-' + now.strftime("%d-%m-%Y-%H-%M-%S") + '.png'
     with open(filename, 'wb') as f:
         f.write(img)
 

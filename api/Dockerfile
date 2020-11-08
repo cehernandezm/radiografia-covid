@@ -1,6 +1,6 @@
 FROM python:3.7-slim
 
-EXPOSE 4200
+EXPOSE 5000
 
 COPY requirements.txt .
 
