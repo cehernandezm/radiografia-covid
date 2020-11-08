@@ -32,7 +32,7 @@ def index():
     image_custom = ImageDataGenerator(
         rescale=1./255
     )
-    test_dir = os.path.abspath(os.getcwd()) + '/api/upload'
+    test_dir =  '/api/upload'
     print(test_dir)
     generatorCustom = image_custom.flow_from_directory(
         directory=test_dir,
