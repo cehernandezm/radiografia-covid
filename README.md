@@ -40,7 +40,7 @@ de radiografias, y se analiza dando como resultado, si es covid, normal o pneumo
 
 ## Como Funciona
 >Se sube una imagen desde el lado del cliente y esta hace una peticion a la API 
-### Pascal
+### API
 >La api hace uso del modelo entrenado, almacenando temporalmente la imagen en formato base64 en el servidor, luego intenta predecir de que tipo es, y se devuelve el porcentaje mas alto.
 
 
